@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+     <meta charset="utf-8">
+     <title>całki nieoznaczone</title>
+
+     <link rel="stylesheet" href="style.css">
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	<script>
+		function wzory() {
+		  window.open("https://image.slidesharecdn.com/wzorynacalki-130108074742-phpapp01/75/wzory-na-calki-1-2048.jpg?cb=1665840300");
+		}
+
+		function pokazRozwiazanie() {
+			var rozwiazanie = document.getElementById("rozwiazanie");
+			if (rozwiazanie.style.display === "none") {
+				rozwiazanie.style.display = "block";
+			} else {
+				rozwiazanie.style.display = "none";
+			}
+		}
+		function pokazRozwiazanie2() {
+			var rozwiazanie = document.getElementById("rozwiazanie2");
+			if (rozwiazanie.style.display === "none") {
+				rozwiazanie.style.display = "block";
+			} else {
+				rozwiazanie.style.display = "none";
+			}
+		}
+		function pokazRozwiazanie3() {
+			var rozwiazanie = document.getElementById("rozwiazanie3");
+			if (rozwiazanie.style.display === "none") {
+				rozwiazanie.style.display = "block";
+			} else {
+				rozwiazanie.style.display = "none";
+			}
+		}
+	  </script>
+
+  </head>
+  <body>
+  
+	<div id="naglowek">
+		<a>całkowanie przez podstawianie</a>
+	</div>
+	
+	<div id="informacje">
+		<a><strong>Uwaga!</strong> artykuł jest przeznaczony dla osób zaznajomionych z pojęciem całek</a>
+		<a id="definicja">
+			Jeżeli funkcję f(x) można zapisać w postaci:<br> <br>
+			<strong>f(x)=g(h(x))⋅h′(x)</strong> <br> <br>
+			gdzie funkcja h(x) ma ciągłą pochodną to: <br> <br>
+			\[\large \bf \int_{}^{}f(x)dx = \int_{}^{}g(t)dt\]
+		</a>
+		<a id="przyklad">
+			Przykład 1. <br>
+			<strong>Oblicz całkę metodą podstawiania:</strong> <br>
+			\[ \color{aqua} \int_{}^{}\cos(4x)dx= \color{white} \left|
+			\begin{array}{ll}\bf 
+			t=4x \qquad /podstawiamy \quad t \quad pod \quad 4x\\\bf 
+			dt=4dx \qquad /obliczamy \quad pochodną\\\bf 
+			dx=\frac{1}{4}dt \qquad /obliczamy \quad dx
+			\end{array} \right|
+			=\int_{}^{} \cos(t)\cdot\frac{1}{4}dt=\frac{1}{4}\int_{}^{} \cos(t)\cdot dt = \frac{1}{4}\sin(t)+C = \color{green} \frac{\sin(4x)}{4}+C\]
+		</a>
+		<a id="przyklad">
+			Przykład 2. <br>
+			<strong>Oblicz całkę metodą podstawiania:</strong> <br>
+			\[
+			\begin{align*}
+			& \color{aqua} {\int_{}^{} \frac{5x+2}{5x^2+4x-8}dx=} \color{white} \int_{}^{} \frac{(5x+2)dx}{5x^2+4x-8}= 
+				\left| \begin{array}{ll}\bf
+				t=5x^2+4-8 \qquad /podstawiamy \quad t \quad pod \quad wyrażenie \quad z \quad mianownika\\\bf
+				dt=(10x+4)dx \qquad /obliczamy \quad pochodną\\\bf 
+				\frac{1}{2}dt=(5x+2)dx \qquad /zauważamy \quad że \quad \frac{1}{2}dt \quad to \quad nasz \quad licznik
+				\end{array} \right|= \\[15pt]
+			& = \int_{}^{} \frac{\frac{1}{2}dt}{t}=\frac{1}{2}\int_{}^{} \frac{1}{t}dt=\frac{1}{2}\ln|t|+C=\color{green} {\frac{1}{2}\ln|5x^2+4x-8|+C}
+			\end{align*}
+			\]
+		</a>
+		<a id="przyklad">
+			Przykład 3. <br>
+			<strong>Oblicz całkę metodą podstawiania:</strong> <br>
+			\[\begin{align*}
+			& \color{aqua} {\int_{}^{}\left( e^{3x}+\frac{1}{e^{2x}}\right)dx=} \color{white}
+				\left| \begin{array}{ll}\bf
+				t=e^x\\\bf
+				dt=e^xdx\\\bf
+				dx=\frac{dt}{e^x}\\\bf
+				dx=\frac{dt}{t}
+				\end{array} \right|=\int_{}^{} \left(t^3+t^{-2}\right)\frac{dt}{t}=\int_{}^{} \left(t^2+t^{-3}\right)dt = \\[15pt] 
+			&=\frac{1}{3}t^3-\frac{1}{2}t^{-2} + C = \frac{1}{3}e^{3x}-\frac{1}{2}e^{-2x}+C=\color{green} {\frac{e^{3x}}{3}-\frac{1}{2e^{2x}}+C}
+			\end{align*}\]
+		</a>
+		<a id="przyklad">
+			Zadanie 1. <br>
+			<strong>Oblicz całkę metodą podstawiania:</strong> <br>
+			\[\color{aqua} \int_{}^{}\frac{dx}{\sqrt[5]{x-2}}\]
+			<button onclick="pokazRozwiazanie()">rozwiązanie</button>
+			<p id="rozwiazanie" style="display: none;">
+				\[\begin{align*}
+				\color{aqua} \int_{}^{}\frac{dx}{\sqrt[5]{x-2}}= \color{white}
+				\left| \begin{array}{ll}\bf
+					t=x-2\\\bf
+					dt=dx\bf
+				\end{array} \right|=\int_{}^{} \frac{dt}{\sqrt[5]{t}}=\int_{}^{} t^{-\frac{1}{5}}dt= \frac{5}{4}t^{\frac{4}{5}}+C= \color{green} \frac{4}{5}\left(x-2\right)^{\frac{4}{5}}+C
+				\end{align*}\]
+			</p>
+		</a>
+		<a id="przyklad">
+			Zadanie 2. <br>
+			<strong>Oblicz całkę metodą podstawiania:</strong> <br>
+			\[\color{aqua} \int_{}^{}\frac{dx}{e^x+e^{-x}}\]
+			<button onclick="pokazRozwiazanie2()">rozwiązanie</button>
+			<p id="rozwiazanie2" style="display: none;">
+				\[\begin{align*}
+				\color{aqua} \int_{}^{} \frac{dx}{e^x+e^{-x}}= \color{white}
+				\left| \begin{array}{ll}\bf
+					t=e^x\\\bf
+					dt=e^xdx\\\bf
+					dx=\frac{dt}{e^x}\\\bf
+					dx=\frac{dt}{t}
+				\end{array} \right|=\int_{}^{} \frac{1}{t+t^{-1}}\cdot\frac{dt}{t}=\int_{}^{} \frac{dt}{t\left(t+t^{-1}\right)}=\int_{}^{}\frac{dt}{t^2+1} = \arctan(t)+C = \color{green} \arctan(e^x)+C
+				\end{align*}\]
+			</p>
+		</a>
+		<a id="przyklad">
+			Zadanie 3. <br>
+			<strong>Oblicz całkę metodą podstawiania:</strong> <br>
+			\[\color{aqua} \int_{}^{}\frac{2}{4x\ln(x)}dx\]
+			<button onclick="pokazRozwiazanie3()">rozwiązanie</button>
+			<p id="rozwiazanie3" style="display: none;">
+			\[\begin{align*}
+			&\color{aqua}{\int_{}^{}\frac{2}{4x\ln(x)}dx=}\color{white} \int_{}^{} \frac{1}{4}\cdot 2 \cdot \frac{1}{x\ln(x)}dx = \frac{1}{2}\int_{}^{}\frac{1}{x\ln(x)}dx=
+			\left| \begin{array}{ll}\bf
+				t=\ln(x)\\\bf
+				dt=\frac{1}{x}dx\\\bf
+				dx=xdt\bf
+			\end{array} \right|= \\[15pt]
+			& =\frac{1}{2}\int_{}^{}\frac{1}{xt}xdx=\frac{1}{2}\int_{}^{}\frac{dx}{t}=\frac{1}{2}\ln|t|+C=\color{green} \frac{1}{2}\ln|\ln(x)|+C
+			\end{align*}\]
+			</p>
+		</a>
+	</div>
+	
+	<div id="menu">
+		<button onclick="wzory()">NAJWAŻNIEJSZE WZORY NA CAŁKI</button>
+	</div>
+	
+	<div id="stopka">
+		autor: Piotr Żywczok
+	</div>
+	
+  </body>
+
+</html>
