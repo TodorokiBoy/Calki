@@ -30,7 +30,7 @@ button:hover
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-#naglowek
+#naglowek /* heading */
 {
 	width: 97%;
 	background: rgba(0, 0, 0, 0.192);
