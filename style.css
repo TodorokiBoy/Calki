@@ -8,7 +8,7 @@ body
 	gap: 30px;
 }
 
-button
+button  /* answer button */
 {
 	width: 300px;
 	display: block;
@@ -57,7 +57,7 @@ button:hover
 
 
 
-#informacje
+#informacje /* informations about substitution */
 {
 	padding: 15px;
 	display: flex;
@@ -69,7 +69,7 @@ button:hover
 	border-radius: 10px;
 	color: rgb(255, 224, 224);
 }
-#definicja
+#definicja  /* substitution definition */
 {
 	display: block;
 	text-align: center;
@@ -77,7 +77,7 @@ button:hover
 	font-size: 25px;
 	color: rgb(255, 224, 224);
 }
-#przyklad
+#przyklad   /* example */
 {
 	display: block;
 	background-color: rgba(0, 0, 0, 0.2);
