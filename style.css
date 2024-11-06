@@ -57,17 +57,17 @@ button:hover
 
 
 
-#informacje /* informations about substitution */
+#informacje /* exercises, examples and informations about substitution */
 {
 	padding: 15px;
 	display: flex;
 	flex-direction: column;
 	gap: 80px;
-	width: 80%;
-	background-color: rgba(0, 0, 0, 0.39);
+	width: 90%;
+	background-color: rgba(0, 0, 0, 0.226);
 	box-shadow: 0px 0px 9px 2px rgb(92, 222, 255);
 	border-radius: 10px;
-	color: rgb(255, 224, 224);
+	color: white;
 }
 #definicja  /* substitution definition */
 {
@@ -101,4 +101,5 @@ button:hover
 	text-align: center;
 	min-height: 30px;
 	color: white;
-}/* End of style.css */
+}
+/* End of style.css */
