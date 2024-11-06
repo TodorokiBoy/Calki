@@ -8,7 +8,7 @@ body
 	gap: 30px;
 }
 
-button
+button  /* przycisk rozwiązań do zadań */
 {
 	width: 300px;
 	display: block;
@@ -57,7 +57,7 @@ button:hover
 
 
 
-#informacje
+#informacje /* cała zawartość strony */
 {
 	padding: 15px;
 	display: flex;
@@ -69,7 +69,7 @@ button:hover
 	border-radius: 10px;
 	color: rgb(255, 224, 224);
 }
-#definicja
+#definicja /* definicja całkowania przez podstawianie */
 {
 	display: block;
 	text-align: center;
